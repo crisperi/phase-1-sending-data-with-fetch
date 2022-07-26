@@ -44,7 +44,14 @@
             return response.json();
         })
         .then (function(object){
-            console.log(object);
+        const idNumber = document.createElement('div');
+        const NumberofId = document.createTextNode(`${object.id}`);
+        console.log(NumberofId);
+        theId=idNumber.appendChild(NumberofId);
+        document.body.appendChild(idNumber);
+        
+            console.log(object.id);
+            return theId;
         })
 
     }
